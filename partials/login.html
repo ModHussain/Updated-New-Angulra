@@ -1,0 +1,465 @@
+<!-- <div class="page-header">
+	<h2>Login</h2>
+</div>
+
+<div class="row">
+
+	<div class="col-md-6">
+		<form class="form-horizontal">
+			<div class="form-group">
+				<label for="username" class="col-sm-3 control-label">User Name:</label>
+				<div class="col-sm-9">
+					<input id="username" ng-model="username" type="text" class="form-control" />
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="password" class="col-sm-3 control-label">Password:</label>
+				<div class="col-sm-9">
+					<input id="password" ng-model="password" type="password" class="form-control" />
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="col-sm-offset-3 col-sm-9">
+					<div class="checkbox">
+						<label>
+							<input type="checkbox" ng-model="rememberMe"> Remember me
+						</label>
+					</div>
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="col-sm-9 col-sm-offset-3">
+					<input type="submit" value="Log In" class="btn btn-primary" ng-click="login()"/>
+				</div>
+			</div>
+		</form>
+	</div>
+	
+	<div class="col-md-6">
+		<p class="alert alert-info">Login with either user:user to read entries or with admin:admin to read and edit entries.</p>
+	</div>
+
+</div> -->
+
+
+<!-- <div class="container-fluid bg"> 
+	
+	<button type="button" class="btn btn-warning  pull-right" ng-click="myFunct()">Sign Up</button>&nbsp;&nbsp;
+  <button type="button" class="btn btn-danger pull-right" ng-click="myFunc()">Sign In</button>&nbsp;&nbsp;
+	
+    <div class="wrapper">
+    <div class="row">
+    <div class="col-sm-8">
+    
+    
+     <div class="container">
+            <div class="row">
+                <div class="col-md-offset-4 col-md-7">
+                  
+                  <div class="row alert alert-info" ng-show="showus">
+                  <h3 style="color:#000">Sign Up Here :</h3>
+                  <form  class="form-group" name="frm" class="" ng-submit="addData()">
+                  <div class="col-sm-6">
+                    
+                       <div  class="form-group">
+                            <label class="control-label" for="name">Name of the Company</label>:<span class="red">*</span>
+                            <input type="text" class="form-control" name="companyname" ng-model="registration.companyName" placeholder="Enter Your Company Name" required> 
+                            <span class="help-block" ng-show="frm.companyname.$dirty && frm.companyname.$error.required">Required.!</span>
+                       </div>
+					   <div class="form-group">
+                       <b>Registration Type :<span class="red">*</span></b>
+                       		<label ng-repeat="role in registrationtype">
+  								<input type="checkbox" checklist-model="registration.registrationType" checklist-value="role"> {{role}} &nbsp;
+							</label>
+                       </div> 
+                        <!-- <div  class="form-group">
+                            <label class="control-label" for="company">Company Type</label>:<span class="red">*</span>
+                            <select class="form-control" ng-options="type for type in companytype" ng-model="registration.companyType" name="companytype" required>
+                                <option value="">Select Company Type</option>
+                            </select>
+                            <span class="help-block" ng-show="frm.companytype.$dirty && frm.companytype.$invalid">Please select company type..!!</span>
+                        </div>-->
+
+                      <!--  <div class="form-group" >
+                            <label class="control-label" for="name">Email ID</label>:<span class="red">*</span>
+                            <input type="email" class="form-control" name="email" ng-pattern="/^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/" ng-model="registration.mailId" placeholder="Enter Mail ID" required> 
+                            <span class="help-block" ng-show="frm.email.$dirty && frm.email.$error.required">Required.!</span>
+                            <span class="help-block" ng-show="frm.email.$error.pattern && frm.email.$invalid ">Enter Valid Email Id</span>
+                        </div>
+
+                        
+                        </div>
+                        <div class="col-sm-6">
+                        <div  class="form-group">
+                          <label class="control-label" for="mobile">Contact Number</label>:<span class="red">*</span>
+                          <input type="text" class="form-control" name="mobile" ng-model="registration.mobile" ng-pattern="/^[7-9][0-9]{9}$/" placeholder="Enter your Contact Number" required>
+                          <span class="help-block" ng-show="frm.mobile.$dirty && frm.mobile.$error.required">Required.!</span>
+                          <span class="help-block" ng-show="frm.mobile.$error.pattern && frm.mobile.$invalid ">Enter Valid Contact Number..!</span>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label" for="name">Website URL</label>:<span class="red">*</span>
+                            <input type="text" class="form-control" name="website" ng-model="registration.url" placeholder="Enter Your Website URL" required> 
+                            <span class="help-block" ng-show="frm.website.$dirty && frm.website.$error.required">Required.!</span>
+                       </div>
+					   <!--  <div class="form-group">
+                            <label class="control-label" for="Licences">No of License</label>:<span class="red">*</span>
+                            <select class="form-control" ng-options="lic for lic in Licences" ng-model="registration.numberOfLicences" name="Licences" required>
+                                <option value="">Select No of license</option>
+                            </select>
+                            <span class="help-block" ng-show="frm.Licences.$dirty && frm.Licences.$invalid">Please select License..!!</span>
+                        </div>
+						<div class="form-group">
+                            <label class="control-label" for="Period">Trail Period</label>:<span class="red">*</span>
+                            <select class="form-control" ng-options="trail for trail in Period" ng-model="registration.trailPeriod" name="Period" required>
+                                <option value="" disabled>Select Trail Period</option>
+                            </select>
+                            <span class="help-block" ng-show="frm.Period.$dirty && frm.Period.$invalid">Please select Trail Period..!!</span>
+                        </div>-->
+                        <!-- <div class="clearfix"></div>
+                            <h3>Address Details:</h3>
+                            <hr/>
+                            <div class="form-group">
+                              <label class="control-label" for="street">Street No</label>:<span class="red">*</span>
+                              <input type="text" class="form-control" name="street" ng-model="registration.street"  placeholder="Enter your Street No" required>
+                              <span class="help-block" ng-show="frm.street.$dirty && frm.street.$error.required">Required..!!</span>
+
+                            </div>
+                            <div class="form-group">
+                              <label class="control-label" for="zipcode">Zip Code</label>:<span class="red">*</span>
+                              <input type="text" class="form-control" name="zipcode" ng-model="registration.zipcode" placeholder="Enter Your Pin/Zip Code" required>
+                              <span class="help-block" ng-show="frm.zipcode.$dirty && frm.zipcode.$error.required">Required..!!</span>
+                            </div>
+                            <div class="form-group">
+                              <label class="control-label" for="mandal">Mandal</label>:<span class="red">*</span>
+                              <input type="text" class="form-control" name="mandal" ng-model="registration.mandal" placeholder="Enter your Mandal" required>
+                              <span class="help-block" ng-show="frm.mandal.$dirty && frm.mandal.$error.required">Required..!</span>
+                            </div>
+                            <div class="form-group">
+                              <label class="control-label" for="city">City</label>:<span class="red">*</span>
+                              <input type="text" class="form-control" name="city" ng-model="registration.city" placeholder="Enter Your City" required>
+                              <span class="help-block" ng-show="frm.city.$dirty && frm.city.$error.required">Required..!</span>
+                            </div>
+                            <!-- <div class="form-group">
+                              <label class="control-label" for="state">State</label>:<span class="red">*</span>
+                              <input type="text" class="form-control" name="state" ng-model="registration.state" placeholder="Enter Your State" required>
+                              <span class="help-block" ng-show="frm.state.$dirty && frm.state.$error.required">Required..!</span>
+                            </div>-->
+                            
+                            <!--  <div class="form-group">
+                            <label class="control-label" for="state">State</label>:<span class="red">*</span>
+                            <select class="form-control" ng-options="s for s in States" ng-model="registration.state" name="state" required>
+                                <option value="">Select Your State</option>
+                            </select>
+                            <span class="help-block" ng-show="frm.state.$dirty && frm.state.$invalid">Please select your State!!</span>
+                        	</div>
+                            <!-- <div class="form-group">
+                              <label class="control-label" for="country">Country</label>:<span class="red">*</span>
+                              <input type="text" class="form-control" name="country" ng-model="registration.country" placeholder="Enter Your Country" required>
+                              <span class="help-block" ng-show="frm.country.$dirty && frm.country.$error.required">Required..!</span>
+                            </div> -->
+                            <!-- <div class="form-group">
+                            <label class="control-label" for="country">Country</label>:<span class="red">*</span>
+                            <select class="form-control" ng-options="c for c in Countries" ng-model="registration.country" name="country" required>
+                                <option value="">Select Your Country</option>
+                            </select>
+                            <span class="help-block" ng-show="frm.country.$dirty && frm.country.$invalid">Please select your Country!!</span>
+                        	</div>-->
+                        <!-- <b class="text-center"><span class="red">* mark is mandatory</span></b>
+                        
+                        <div class="form-group pull-right">
+                          <button type="submit" class="btn btn-primary" ng-click="myFunct()" >Back</button>
+                          <button type="submit" class="btn btn-primary" ng-disabled="frm.$invalid" >Submit</button>
+                          </div>  
+                          </div>   
+                    </form>
+                </div>
+</div>
+            </div>
+          </div>
+    
+    
+    -->
+   
+    
+   <!--  </div>-->
+  <!--   <div class="col-sm-4 ">	
+    <form class="form-signin" name="myForm" ng-show="showMe">
+    <div class="form-group">
+      <label class="l1"  for="email">Username:</label>
+      <input type="email" class="form-control i1" ng-model="username" name="username" required>
+      <span class="error" ng-show=" myForm.username.$touched && myForm.username.$invalid"> Name is required.</span>
+
+    </div>
+    <div class="form-group">
+      <label class="l1" for="pwd">Password:</label>
+      <input type="password" class="form-control i1" ng-model="password" name="password" required>
+      <span class="error" ng-show="myForm.password.$touched && myForm.password.$invalid"> Password is required.</span>
+
+    </div>
+    <div class="checkbox">
+      <label class="l1"><input type="checkbox" name="remember"> Remember me</label>
+    </div>
+   <button type="submit" class="btn btn-success center bn center-block" ng-click="login()" >Login</button>
+   <a  class=" ctxt pull-left">Change Password</a>
+   <a  class=" ftxt pull-right">Forgot Password</a>
+  </form></div></div></div>-->
+     <div class="container-fluid bg">
+     
+     
+<nav class="navbar navbar-default shaw">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span> 
+      </button>
+      <a class="navbar-brand h" href="#"><span class="fa fa-users"></span>&nbsp;ResourceAdda</a>
+      <li class="text-center l"><a href="#">Is an Ojas Product</a></li>
+      
+    </div>
+    <div class="collapse navbar-collapse navbar-right" id="myNavbar" >
+      <ul class="nav navbar-nav">
+        <li><a href="#">About Product</a></li>
+        <li><a href="#">Our Clients</a></li> 
+        <li><a href="#">Contact Us</a></li> 
+      </ul>
+   
+    </div>
+  </div>
+</nav>
+     <br>
+     <br>
+     
+     
+     
+     
+     
+     
+     
+     
+     <div class="container ">
+    
+      <div class="row">
+  <div class="col-sm-6">
+
+  </div> 
+  <div class="col-sm-3">
+ <ul class="nav nav-tabs">
+    <li class="active"><a data-toggle="tab" href="#login">Login</a></li>
+    <li><a data-toggle="tab" href="#signup">Sign Up</a></li>
+   
+    
+  </ul>
+ </div>
+ <div class="col-sm-2"></div></div>
+  
+  
+  
+   <div class="row">
+  <div class="col-sm-6 cj shawd">
+  <h3 class="big white">Are you new to ResourceAdda ?</h3>
+  <p class="big"><i class="fa fa-hand-o-up"></i> &nbsp;&nbsp;One click away to know About Product .</p>
+  
+  <p class="big"><i class="fa fa-wpforms"></i> &nbsp;&nbsp;Get a glance of matching profiles for your Requirements </p>
+  
+  <p class="big"><i class="fa fa-tags"></i> &nbsp;&nbsp;View of open positions with various clients.</p>
+  
+  <p class="big"><i class="fa fa-tachometer"></i> &nbsp;&nbsp;Track your resource on-boarding journey with clients.</p>
+  
+  <p class="big"><i class="	glyphicon glyphicon-map-marker"></i> &nbsp;&nbsp;Choose your preferred Resource at various location</p>
+  
+  <p class="big"><i class="fa fa-balance-scale"></i> &nbsp;&nbsp;Find best matching requirement to propose your resource </p>
+ <a  data-toggle="tab" href="#signup" class="btn btn-primary center bn center-block con" > Register to browse through the features of the product</a>
+  </div> 
+  <div class="col-sm-5">
+  
+  
+    <div class="tab-content con shawd">
+  <div  id="login" class="tab-pane fade in active">	
+    <form class="form-signin" name="myForm">
+    <div class="form-group">
+      <label class="l1"  for="email">Username:</label>
+      <input type="email" class="form-control i1" ng-model="username" name="username" required>
+      <span class="error" ng-show=" myForm.username.$touched && myForm.username.$invalid"> Name is required.</span>
+
+    </div>
+    <div class="form-group">
+      <label class="l1" for="pwd">Password:</label>
+      <input type="password" class="form-control i1" ng-model="password" name="password" required>
+      <span class="error" ng-show="myForm.password.$touched && myForm.password.$invalid"> Password is required.</span>
+
+    </div>
+    <div class="checkbox">
+      <label class="l1"><input type="checkbox" name="remember"> Remember me</label>
+    </div>
+   <button type="submit" class="btn btn-primary center bn center-block btn-block" ng-click="login()" >Login</button>
+   <a  class=" c  pull-left">Change Password</a>
+   <a  class="  c  pull-right">Forgot Password</a>
+  </form></div>
+  
+  
+  <!-- signup tab -->
+		
+		<div  class="tab-pane fade form-signup " id="signup">
+                  
+                  <form  class="form-group" name="frm" class=" " ng-submit="addData()">
+                
+                    <input type="hidden" ng-model="registration.planId">
+                       <div  class="form-group">
+                            <label class="control-label l1" for="name">Name of the Company</label>:<span class="red">*</span>
+                            <input type="text" class="form-control" name="companyname" ng-model="registration.companyName" placeholder="Enter Your Company Name" required> 
+                            <span class="help-block" ng-show="frm.companyname.$dirty && frm.companyname.$error.required">Required.!</span>
+                       </div>
+					   <div class="form-group">
+                       <b class="l1">Registration Type :<span class="red">*</span></b>
+                       		<label ng-repeat="role in registrationtype">
+  								<input type="checkbox" checklist-model="registration.registrationType" checklist-value="role"><b class="l1"> {{role}}</b> &nbsp;
+							</label>
+                       </div> 
+                        <!-- <div  class="form-group">
+                            <label class="control-label" for="company">Company Type</label>:<span class="red">*</span>
+                            <select class="form-control" ng-options="type for type in companytype" ng-model="registration.companyType" name="companytype" required>
+                                <option value="">Select Company Type</option>
+                            </select>
+                            <span class="help-block" ng-show="frm.companytype.$dirty && frm.companytype.$invalid">Please select company type..!!</span>
+                        </div>-->
+						<div  class="form-group">
+                            <label class="control-label l1" for="name">Contact Person</label>:<span class="red">*</span>
+                            <input type="text" class="form-control" name="person" ng-model="registration.contactPerson" placeholder="Enter Your Contact Name" required> 
+                            <span class="help-block" ng-show="frm.person.$dirty && frm.person.$error.required">Required.!</span>
+                       </div>
+                       <div class="form-group" >
+                            <label class="control-label l1" for="name">Email ID</label>:<span class="red">*</span>
+                            <input type="email" class="form-control" name="email" ng-pattern="/^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/" ng-model="registration.mailId" placeholder="Enter Mail ID" required> 
+                            <span class="help-block" ng-show="frm.email.$dirty && frm.email.$error.required">Required.!</span>
+                            <span class="help-block" ng-show="frm.email.$error.pattern && frm.email.$invalid ">Enter Valid Email Id</span>
+                        </div>
+
+                        
+                        
+                        
+                        <div  class="form-group">
+                          <label class="control-label l1" for="mobile">Contact Number</label>:<span class="red">*</span>
+                          <input type="text" class="form-control" name="mobile" ng-model="registration.mobile" ng-pattern="/^[7-9][0-9]{9}$/" placeholder="Enter your Contact Number" required>
+                          <span class="help-block" ng-show="frm.mobile.$dirty && frm.mobile.$error.required">Required.!</span>
+                          <span class="help-block" ng-show="frm.mobile.$error.pattern && frm.mobile.$invalid ">Enter Valid Contact Number..!</span>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label l1" for="name">Website URL</label>:<span class="red">*</span>
+                            <input type="text" class="form-control" name="website" ng-model="registration.url" placeholder="Enter Your Website URL" required> 
+                            <span class="help-block" ng-show="frm.website.$dirty && frm.website.$error.required">Required.!</span>
+                       </div>
+					   <!--  <div class="form-group">
+                            <label class="control-label" for="Licences">No of License</label>:<span class="red">*</span>
+                            <select class="form-control" ng-options="lic for lic in Licences" ng-model="registration.numberOfLicences" name="Licences" required>
+                                <option value="">Select No of license</option>
+                            </select>
+                            <span class="help-block" ng-show="frm.Licences.$dirty && frm.Licences.$invalid">Please select License..!!</span>
+                        </div>
+						<div class="form-group">
+                            <label class="control-label" for="Period">Trail Period</label>:<span class="red">*</span>
+                            <select class="form-control" ng-options="trail for trail in Period" ng-model="registration.trailPeriod" name="Period" required>
+                                <option value="" disabled>Select Trail Period</option>
+                            </select>
+                            <span class="help-block" ng-show="frm.Period.$dirty && frm.Period.$invalid">Please select Trail Period..!!</span>
+                        </div>-->
+                        <!-- <div class="clearfix"></div>
+                            <h3>Address Details:</h3>
+                            <hr/>
+                            <div class="form-group">
+                              <label class="control-label" for="street">Street No</label>:<span class="red">*</span>
+                              <input type="text" class="form-control" name="street" ng-model="registration.street"  placeholder="Enter your Street No" required>
+                              <span class="help-block" ng-show="frm.street.$dirty && frm.street.$error.required">Required..!!</span>
+
+                            </div>
+                            <div class="form-group">
+                              <label class="control-label" for="zipcode">Zip Code</label>:<span class="red">*</span>
+                              <input type="text" class="form-control" name="zipcode" ng-model="registration.zipcode" placeholder="Enter Your Pin/Zip Code" required>
+                              <span class="help-block" ng-show="frm.zipcode.$dirty && frm.zipcode.$error.required">Required..!!</span>
+                            </div>
+                            <div class="form-group">
+                              <label class="control-label" for="mandal">Mandal</label>:<span class="red">*</span>
+                              <input type="text" class="form-control" name="mandal" ng-model="registration.mandal" placeholder="Enter your Mandal" required>
+                              <span class="help-block" ng-show="frm.mandal.$dirty && frm.mandal.$error.required">Required..!</span>
+                            </div>
+                            <div class="form-group">
+                              <label class="control-label" for="city">City</label>:<span class="red">*</span>
+                              <input type="text" class="form-control" name="city" ng-model="registration.city" placeholder="Enter Your City" required>
+                              <span class="help-block" ng-show="frm.city.$dirty && frm.city.$error.required">Required..!</span>
+                            </div>
+                            <!-- <div class="form-group">
+                              <label class="control-label" for="state">State</label>:<span class="red">*</span>
+                              <input type="text" class="form-control" name="state" ng-model="registration.state" placeholder="Enter Your State" required>
+                              <span class="help-block" ng-show="frm.state.$dirty && frm.state.$error.required">Required..!</span>
+                            </div>-->
+                            
+                            <!--  <div class="form-group">
+                            <label class="control-label" for="state">State</label>:<span class="red">*</span>
+                            <select class="form-control" ng-options="s for s in States" ng-model="registration.state" name="state" required>
+                                <option value="">Select Your State</option>
+                            </select>
+                            <span class="help-block" ng-show="frm.state.$dirty && frm.state.$invalid">Please select your State!!</span>
+                        	</div>
+                            <!-- <div class="form-group">
+                              <label class="control-label" for="country">Country</label>:<span class="red">*</span>
+                              <input type="text" class="form-control" name="country" ng-model="registration.country" placeholder="Enter Your Country" required>
+                              <span class="help-block" ng-show="frm.country.$dirty && frm.country.$error.required">Required..!</span>
+                            </div> -->
+                            <!-- <div class="form-group">
+                            <label class="control-label" for="country">Country</label>:<span class="red">*</span>
+                            <select class="form-control" ng-options="c for c in Countries" ng-model="registration.country" name="country" required>
+                                <option value="">Select Your Country</option>
+                            </select>
+                            <span class="help-block" ng-show="frm.country.$dirty && frm.country.$invalid">Please select your Country!!</span>
+                        	</div>-->
+                        <b class="text-center"><span class="red">* mark is mandatory</span></b>
+                        
+                        <div class="form-group pull-right">
+                          <a type="submit" class="btn btn-primary" data-toggle="tab" href="#login"  >Back</a>
+                          <button type="submit" class="btn btn-primary" ng-disabled="frm.$invalid" >Submit</button>
+                          </div>  
+                           
+                    </form>
+		</div>  
+  
+  		
+  
+  
+ 
+  
+  </div>
+   </div>
+ <div class="col-sm-2"></div></div>
+  
+ 
+  
+</div>
+    
+    
+    
+
+</div>
+		  <div class="container">
+			    <h3 style="color:#000">Choose Your Special Offer :</h3>
+			<div class="col-sm-2 alert alert-info" ng-repeat="x in UserDetails">
+			 <div class="panel panel-default " >
+			<div class="panel-heading"> <h4 class="text-center"><i class="fa fa-rupee"></i>&nbsp;{{x.rate}}</h4></div>
+			  <div class="panel-body">
+			   				<p class="text-center">{{x.month}}</p>
+			                <p class="text-center">{{x.plus}}</p>
+							<p class="text-center">{{x.vacancy}}</p>
+					        <p class="text-center">{{x.cv}}</p>
+					        <p class="text-center">{{x.email}}</p>
+
+</div>
+  <div class="panel-footer"><center><button class="btn btn-primary" data-toggle="tab" value="{{x._id}}" ng-click="plan(x._id)" href="#signup">BUY NOW</button></center></div>
+</div> 
+ </div>
+ 
+ </div>
+
+
+
+
+

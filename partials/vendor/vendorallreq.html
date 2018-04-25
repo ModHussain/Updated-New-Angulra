@@ -1,0 +1,199 @@
+ <div  class="container m-t-50">
+ 
+ <br>
+                 <!--  <form class="form-inline text-center">
+                    <div class="input-group">
+                    <input type="text" ng-model="search" class="form-control" size="50" placeholder="Search Here...." required>
+                    <div class="input-group-btn">
+                    <button type="button" class="btn btn-primary">Search</button>
+                    </div>
+                    </div>
+                </form>
+              <br>
+             <div class="row">
+                <div class="col-md-12">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="col-md-4 control-label">Search By</label>
+                            <div class="col-md-8">
+                                <select class="form-control" ng-model="SelectedCriteria" ng-options="S for S in Selectors">
+                                    <option value="">please select value</option>
+                                </select> 
+                            </div>  
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="col-md-4 control-label">Search value:</label>
+                            <div class="col-md-6">
+                                <input type="text" class="form-control" ng-model="filterValue" class="form-control" 
+                                ng-change="postFilter();"/> 
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+            <br>
+              <div class="row">
+                                  <div class="col-md-6">
+                                      <pagination total-items="totalCount" ng-change="pageChanged()" items-per-page="pageSizeSelected" direction-links="true" ng-model="pageIndex" max-size="maxSize" class="pagination" boundary-links="true" rotate="false" num-pages="numPages"></pagination>
+                                  </div>
+                                  
+                                  </div>
+                                  <br>
+                                  
+                                   <div class="row sea">
+              <h4 style="color:#337ab7">Search Your Requirement :</h4>
+              <div class="col-sm-3">
+              
+              <input type="text" class="form-control" ng-model="search.primarySkills" placeholder="Skills">
+              
+              </div>
+              <div class="col-sm-3">
+              <input type="text" class="form-control" ng-model="search.jobCategory" placeholder="job Category">
+              </div>
+              <div class="col-sm-2">
+              <input type="text" class="form-control" ng-model="search.jobLocation" placeholder="Location">
+              </div>
+              <div class="col-sm-2">
+              <input type="text" class="form-control" ng-model="search.experience" placeholder="Experience">
+              </div>
+              
+              <div class="col-sm-2">
+              <button type="button" class="btn btn-primary"><i class="fa fa-search"></i>&nbsp;Search</button>
+              </div>
+              
+              </div>
+              <br>
+            
+      <div class="container m-t-20">
+           
+                       
+      <div class="row">
+         <div class="col-sm-3">
+         <h3>Set your filter:</h3>
+       <div >
+ 
+   
+  <uib-accordion close-others="oneAtATime">
+ 
+    <div uib-accordion-group class="panel-default" is-open="status.Location">
+      <uib-accordion-heading>
+      Location<i class="pull-right glyphicon" ng-class="{'glyphicon glyphicon-minus': status.Location, 'glyphicon glyphicon-plus': !status.open}"></i>
+      </uib-accordion-heading>
+     
+                        <ul class=" list-group" ng-repeat="x in States">
+                       <input type="checkbox" >&nbsp;{{x}}
+                        </ul>
+    </div>
+    <div uib-accordion-group class="panel-default" is-open="status.Job ">
+      <uib-accordion-heading>
+        Job Category <i class="pull-right glyphicon" ng-class="{'glyphicon glyphicon-minus': status.Job , 'glyphicon glyphicon-plus': !status.open}"></i>
+      </uib-accordion-heading>
+     			<ul class=" list-group" ng-repeat="c in Jobc">
+                       <input type="checkbox" >&nbsp;{{c}}
+                        </ul>
+    </div>
+    <div uib-accordion-group class="panel-default" is-open="status.Skills">
+      <uib-accordion-heading>
+         Skills <i class="pull-right glyphicon" ng-class="{'glyphicon glyphicon-minus': status.Skills, 'glyphicon glyphicon-plus': !status.open}"></i>
+      </uib-accordion-heading>
+     		<ul class=" list-group" ng-repeat="s in skills">
+                       <input type="checkbox" >&nbsp;{{s}}
+                        </ul>
+    </div>
+    <div uib-accordion-group class="panel-default" is-open="status.Experience">
+      <uib-accordion-heading>
+         Experience <i class="pull-right glyphicon" ng-class="{'glyphicon glyphicon-minus': status.Experience, 'glyphicon glyphicon-plus': !status.open}"></i>
+      </uib-accordion-heading>
+      <ul class=" list-group" ng-repeat="e in experience">
+                       <input type="checkbox" >&nbsp;{{e}}
+                        </ul>
+    </div>
+    
+    <div uib-accordion-group class="panel-default" is-open="status.company">
+      <uib-accordion-heading>
+         Top Companies <i class="pull-right glyphicon" ng-class="{'glyphicon glyphicon-minus': status.company, 'glyphicon glyphicon-plus': !status.open}"></i>
+      </uib-accordion-heading>
+     <ul class=" list-group" ng-repeat="tc in company">
+                       <input type="checkbox" >&nbsp;{{tc}}
+                        </ul>
+    </div>
+    
+    
+    
+  
+<br>
+<center><button type="submit" class=" btn primary " >Clear filters</button>
+<button type="submit" class=" btn primary " >Submit</button></center>
+
+  
+</div>
+         
+         
+         
+         </div>
+         <div class="col-sm-8">
+         <div ng-repeat="x in list | filter:search">
+         <div class="panel panel-default">
+         <div><h3 class="text-center" style="color:#000"><span class="	fa fa-building"></span>&nbsp;&nbsp;{{x.companyName}}</h3></div>
+          <div class="panel-body" style="background-color:#eee">
+          <div class="row">
+          <div class="col-sm-2"></div>
+          <div class="col-sm-10">
+          <div class="row">
+              <div class="col-sm-4"><label><span class="fa fa-briefcase"></span>&nbsp;&nbsp;Job Category</label></div>
+              <div class="col-sm-2">:</div>
+              <div class="col-sm-6">{{ x.jobCategory}}</div>
+          </div>
+           <div class="row">
+              <div class="col-sm-4"><label><span class="fa fa-black-tie"></span>&nbsp;&nbsp;Job Type</label></div>
+              <div class="col-sm-2">:</div>
+              <div class="col-sm-6">{{x.jobTitle}}</div>
+          </div>
+           <div class="row">
+              <div class="col-sm-4"><label><span class="fa fa-wpforms"></span>&nbsp;&nbsp;Job Description</label></div>
+              <div class="col-sm-2">:</div>
+              <div class="col-sm-6">{{ x.description}}</div>
+          </div>
+           <div class="row">
+              <div class="col-sm-4"><span class="glyphicon glyphicon-map-marker"></span>&nbsp;&nbsp;<label>Job Location</label></div>
+              <div class="col-sm-2">:</div>
+              <div class="col-sm-6">{{x.jobLocation}}</div>
+          </div>
+           <div class="row">
+              <div class="col-sm-4"><span class="glyphicon glyphicon-briefcase"></span>&nbsp;&nbsp;<label>Experience</label></div>
+              <div class="col-sm-2">:</div>
+              <div class="col-sm-6">{{x.experience}}</div>
+          </div>
+           <div class="row">
+              <div class="col-sm-4"><span class="glyphicon glyphicon-tag"></span>&nbsp;&nbsp;<label>Primary Skills</label></div>
+              <div class="col-sm-2">:</div>
+              <div class="col-sm-6">{{x.primarySkills}}</div>
+          </div>
+           <div class="row">
+              <div class="col-sm-4"><label><span class="fa fa-users"></span>&nbsp;&nbsp;No of Resources</label></div>
+              <div class="col-sm-2">:</div>
+              <div class="col-sm-6">{{x.resources}}</div>
+          </div>
+          <div class="row">
+              <div class="col-sm-4"><label><span class="glyphicon glyphicon-calendar"></span>&nbsp;&nbsp;Join Within</label></div>
+              <div class="col-sm-2">:</div>
+              <div class="col-sm-6">{{x.joinWithin}}</div>
+          </div>
+      
+          </div>
+          <div class="col-sm-2"></div>
+          </div>
+          
+          </div>
+          
+        </div>
+       </div> </div>
+        </div> 
+
+
+                                  </div>
+                                
+                              </div>

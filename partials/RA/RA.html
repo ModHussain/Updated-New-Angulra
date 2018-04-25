@@ -1,0 +1,49 @@
+<nav class="navbar navbar-inverse bg-color">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li  ui-sref-active="active"><a ui-sref=".dashboard">Dashboard</a></li>
+        <li  ui-sref-active="active"><a ui-sref=".buynow" >Registration</a></li>
+        <li  ui-sref-active="active"><a ui-sref=".postarequirementlist">Requirement</a></li>
+        <li ui-sref-active="active"><a ui-sref=".resourcelist" > Resource</a></li>
+        <li ng-show="{{all_users_type}}" ui-sref-active="active"><a ui-sref=".alluserlist" >All Users</a></li>
+       <!--  <li><a ui-sref=".JoinWithIn">JoinWithIn</a></li> -->
+        <li class="dropdown">
+		    <button class="btn btn-primary dropdown-toggle master_btn" type="button" data-toggle="dropdown" style="">Master
+		    <span class="caret"></span></button>
+		    <ul class="dropdown-menu master_dropdown">
+		      <li><a ui-sref=".jobcategory" >Job Category</a></li>
+		      <li><a ui-sref=".Jobtype">Job Type</a></li>
+		      <li><a ui-sref=".JoinWithIn">Notice Period</a></li>
+		      <li><a ui-sref=".PrimarySkills">Primary Skills</a></li>
+		      <li><a ui-sref=".secondaryskill">Secondary Skill</a></li>
+		    </ul>
+	    </li>
+
+       <li  ui-sref-active="active"><a ui-sref=".postresource">Post Resource</a></li>
+       <!-- <li ui-sref-active="active"><a ui-sref=".resourceMap" >Resource Map</a></li>-->
+     </ul>
+      
+	  <ul class="nav navbar-nav navbar-right">
+	  <li><a><span class="fa fa-user-circle-o"></span>&nbsp;{{model}}</a></li>
+	  
+	   <li class="m-t-20"> 
+			   <select class="form-control" ng-options="reg for reg in register" ng-model="registerData" ng-change="dataregister()">
+				<option value="" >Switch To</option>
+			  </select>
+	  </li>
+	  
+	    
+	 <li ng-controller="LoginCtrl"><a href="#" ng-click="logout();"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<div ui-view></div>

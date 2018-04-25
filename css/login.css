@@ -1,0 +1,166 @@
+/* .bg {
+  	background-image:url(../images/bg1.jpg);
+  	background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+	-webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  height: 100%;
+} */
+body, html {
+    height: 100%;
+    background-color:#f8f8f8;
+}
+.shaw{
+	box-shadow: 0px 2px 10px  #333;
+	height:70px;
+}
+.shawd{
+	box-shadow: 0px 1px 10px  #333;
+
+}
+.alert-info
+{
+	background-color:#eee!important;
+}
+.l2{
+	margin:0 auto;
+}
+.h
+{
+	font-size:32px;
+	color:#4a90e2 !important;
+}
+.c{
+	color:#4a90e2 !important;
+}
+
+.cj
+{
+	background-color:#4a90e2;
+}
+.con{
+	
+	border:2px solid #ddd;
+	background-color:#fff;
+	color:#000;
+	
+}
+p.big {
+    line-height: 2.4;
+    font-size:18px;
+    font-family:High Tower Text;
+    color:#fff;
+}
+.wrapper {	
+	margin-top: 80px;
+  margin-bottom: 80px;
+}
+.form-signin {
+  max-width: 380px;
+  padding: 15px 35px 45px;
+  margin: 0 auto;
+} 
+.form-signup {
+  max-width: 580px;
+  padding: 15px 35px 45px;
+
+  margin: 0 auto;
+} 
+.form-plan {
+  max-width: 1050px;
+
+  margin: 0 auto;
+} 
+ .l1{
+ color:#000;
+ }
+ .white
+ {
+ color:#fff;
+ font-family:High Tower Text;
+ font-weight:bold;
+ }
+ .h21{
+	 color:white;
+ text-align:center;
+ }
+ .i1{
+    border: 3px double#080808;
+ }
+ .error{
+color:rgb(233, 35, 35);
+ }
+
+ a:hover{
+  color:#09c;
+  text-decoration-color:rgb(76, 107, 128) ;
+  text-decoration:none;
+  }
+  a:focus
+  {
+   text-decoration:none;
+  }
+  .ftxt{
+    color:rgb(239, 175, 78);
+    
+    }
+    .ctxt{
+      color:rgb(239, 175, 78);
+    
+      }
+      
+      
+      .panel {
+      
+      transition: box-shadow 0.5s;
+      border-radius:0px;
+  }
+  .panel:hover {
+      box-shadow: 7px 5px 10px #ddd;
+  }
+
+  .panel-footer .btn:hover {
+      
+      background-color: #fff !important;
+      color: #f4511e;
+  }
+  .l
+   {
+  list-style-type: none;
+  font-size:16px;
+  font-family:High Tower Text;
+  
+   }
+      
+      
+
+     
+@media screen and (max-width: 480px) and (min-width: 320px) {
+  .con{
+	width:auto;
+	border:2px solid #ddd;
+	background-color:#fff;
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
